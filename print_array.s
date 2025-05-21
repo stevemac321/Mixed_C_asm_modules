@@ -1,5 +1,6 @@
 .section .text
 .global print_int_array
+.extern uart_put_int
 
 print_int_array:
     addi sp, sp, -56        # Allocate stack space
