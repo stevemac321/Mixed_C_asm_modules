@@ -1,8 +1,6 @@
 #include "common.h"
 
 // test_func.c
-#define GPIO_BASE 0x10012000
-#define GPIO_INPUT (*(volatile uint32_t *)GPIO_BASE)
 
 void print_timer() {
    uint32_t timer_val = *((volatile uint32_t *)0x02000000);
