@@ -3,7 +3,7 @@
 // test_func.c
 
 void print_timer() {
-   uint32_t timer_val = *((volatile uint32_t *)0x02000000);
+   uint32_t timer_val = *((volatile uint32_t *)CLINT_TIMER_BASE);
     uart_puts("Timer Low Bits: ");
     uart_putc((timer_val & 0xFF) + '0');  
     uart_putc('\n');
