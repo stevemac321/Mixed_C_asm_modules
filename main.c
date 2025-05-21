@@ -18,10 +18,15 @@ int main(int argc, char *argv[])
             uart_putc('\n');
     }
 
-    int a[] = {0,1,2,3,4,5,6,7,8,9};
+    
+    int a[] = {7, 2, 9, 0, 4, 1, 8, 5, 3, 6}; // Unsorted arrangement
     print_int_array(a, 10);
     uart_putc('\n');
 
+    insertion_sort(a, 10, int_less);
+    print_int_array(a, 10);
+    uart_putc('\n');
+    
     print_timer();
     uart_putc('\n');
 
